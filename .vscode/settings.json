@@ -1,4 +1,4 @@
 {
-  "diffEditor.ignoreTrimWhitespace": false,      
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.find.addExtraSpaceOnTop": false,
 }
