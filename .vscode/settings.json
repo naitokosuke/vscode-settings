@@ -1,4 +1,18 @@
 {
+    // auto rename tag, auto close tag
+    "editor.linkedEditing": true,
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "typescript.autoClosingTags": true,
+
   "diffEditor.ignoreTrimWhitespace": true,
-  "editor.find.addExtraSpaceOnTop": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.hover.sticky": true,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.tabs.enabled": true,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
 }
