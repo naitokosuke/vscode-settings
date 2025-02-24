@@ -24,4 +24,7 @@
   // お好みで
   "javascript.inlayHints.parameterNames.enabled": "all", // JavaScript のインラインヒント（関数の引数名）をすべて表示
   "typescript.inlayHints.parameterNames.enabled": "all", // TypeScript のインラインヒント（関数の引数名）をすべて表示
+
+  // お試し中
+  "editor.minimap.enabled": false,
 }
