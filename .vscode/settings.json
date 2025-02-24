@@ -25,6 +25,9 @@
   "javascript.inlayHints.parameterNames.enabled": "all", // JavaScript のインラインヒント（関数の引数名）をすべて表示
   "typescript.inlayHints.parameterNames.enabled": "all", // TypeScript のインラインヒント（関数の引数名）をすべて表示
 
+  "workbench.editor.enablePreview": false, // ファイルを開くとき、プレビュー（タブを固定せずに一時的に開く）を無効にする
+  "workbench.editor.enablePreviewFromQuickOpen": false, // クイックオープン（Ctrl+P など）から開くときもプレビューを無効にする
+
   // お試し中
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": false, // エディタの右側に表示されるミニマップ（コードの縮小表示）を無効にする
 }
