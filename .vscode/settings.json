@@ -21,4 +21,7 @@
   "workbench.editor.highlightModifiedTabs": true, // 変更されたファイルのタブを強調表示
   "workbench.editor.closeOnFileDelete": true, // ファイルが削除されたとき、エディタを自動的に閉じる
 
+  // お好みで
+  "javascript.inlayHints.parameterNames.enabled": "all", // JavaScript のインラインヒント（関数の引数名）をすべて表示
+  "typescript.inlayHints.parameterNames.enabled": "all" // TypeScript のインラインヒント（関数の引数名）をすべて表示
 }
