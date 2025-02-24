@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker",
+    "eamodio.gitlens",
+    "mpontus.tab-cycle",
+    "naumovs.color-highlight",
+
+    // 日本語非対応だった気がする
+    "yoavbls.pretty-ts-errors",
+
+    // お試し中
+    "VisualStudioExptTeam.vscodeintellicode",
+    "wix.vscode-import-cost",
+    "WallabyJs.console-ninja",
+    "ChakrounAnas.turbo-console-log",
+  ]
+}
