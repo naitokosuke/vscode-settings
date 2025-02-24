@@ -1,18 +1,22 @@
 {
-    // auto rename tag, auto close tag
-    "editor.linkedEditing": true,
-    "html.autoClosingTags": true,
-    "javascript.autoClosingTags": true,
-    "typescript.autoClosingTags": true,
+ // auto rename tag, auto close tag
+  "editor.linkedEditing": true, // 開始タグを変更すると、対応する終了タグも自動的に変更される
+  "html.autoClosingTags": true, // HTML タグを自動で閉じる
+  "javascript.autoClosingTags": true, // JavaScript 内で JSX タグなどを自動で閉じる
+  "typescript.autoClosingTags": true, // TypeScript 内で JSX タグなどを自動で閉じる
 
-  "diffEditor.ignoreTrimWhitespace": true,
-  "editor.inlineSuggest.enabled": true,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.suggestSelection": "recentlyUsed",
-  "editor.unicodeHighlight.invisibleCharacters": true,
-  "editor.hover.sticky": true,
-  "files.insertFinalNewline": true,
-  "terminal.integrated.tabs.enabled": true,
-  "workbench.editor.closeOnFileDelete": true,
-  "workbench.editor.highlightModifiedTabs": true,
+  "diffEditor.ignoreTrimWhitespace": true, // 行末の空白の違いを無視する
+
+  "editor.unicodeHighlight.invisibleCharacters": true, // 見えない Unicode 文字を強調表示
+  "editor.suggestSelection": "recentlyUsed", // 補完候補を最近使ったものから優先的に選択
+  "editor.multiCursorModifier": "ctrlCmd", // 複数カーソルの操作に Ctrl (Windows/Linux) / Cmd (Mac) を使用
+  "editor.inlineSuggest.enabled": true, // インラインでのコード補完を有効化
+  "editor.hover.sticky": true, // ホバー（ツールチップ）を固定表示できるようにする
+
+  "files.insertFinalNewline": true, // ファイルの末尾に自動的に改行を挿入
+
+  "terminal.integrated.tabs.enabled": true, // ターミナルタブを有効化
+
+  "workbench.editor.highlightModifiedTabs": true, // 変更されたファイルのタブを強調表示
+  "workbench.editor.closeOnFileDelete": true, // ファイルが削除されたとき、エディタを自動的に閉じる
 }
