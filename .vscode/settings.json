@@ -14,9 +14,11 @@
   "editor.hover.sticky": true, // ホバー（ツールチップ）を固定表示できるようにする
 
   "files.insertFinalNewline": true, // ファイルの末尾に自動的に改行を挿入
+  "files.trimFinalNewlines": true, // ファイル末尾の不要な改行を削除
 
   "terminal.integrated.tabs.enabled": true, // ターミナルタブを有効化
 
   "workbench.editor.highlightModifiedTabs": true, // 変更されたファイルのタブを強調表示
   "workbench.editor.closeOnFileDelete": true, // ファイルが削除されたとき、エディタを自動的に閉じる
+
 }
