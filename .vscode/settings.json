@@ -33,4 +33,7 @@
 
   // お試し中
   "editor.minimap.enabled": false, // エディタの右側に表示されるミニマップ（コードの縮小表示）を無効化
+
+  // Global Level Config なので User 設定の方に記述する必要アリ
+  "window.newWindowDimensions": "maximized", // 新しいウィンドウを開くときに自動的に最大化する
 }
