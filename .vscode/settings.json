@@ -1,39 +1,39 @@
 {
  // auto rename tag, auto close tag
-  "editor.linkedEditing": true, // 開始タグを変更すると、対応する終了タグも自動的に変更
-  "html.autoClosingTags": true, // HTML タグを自動で閉じる
-  "javascript.autoClosingTags": true, // JavaScript 内で JSX タグなどを自動で閉じる
-  "typescript.autoClosingTags": true, // TypeScript 内で JSX タグなどを自動で閉じる
+  "editor.linkedEditing": true,
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true,
 
-  "diffEditor.ignoreTrimWhitespace": true, // 行末の空白の違いを無視
+  "diffEditor.ignoreTrimWhitespace": true,
 
-  "editor.unicodeHighlight.invisibleCharacters": true, // 見えない Unicode 文字を強調表示
-  "editor.suggestSelection": "recentlyUsed", // 補完候補を最近使ったものから優先的に選択
-  "editor.multiCursorModifier": "ctrlCmd", // 複数カーソルの操作に Ctrl (Windows/Linux) / Cmd (Mac) を使用
-  "editor.inlineSuggest.enabled": true, // インラインでのコード補完を有効
-  "editor.hover.sticky": true, // ホバー（ツールチップ）を固定表示
-  "editor.bracketPairColorization.enabled": true, // // 括弧ペアの色付けを有効化
-  "editor.guides.bracketPairs": true, // 対応する括弧（`()`, `{}`, `[]`）を強調表示するガイドラインを有効化
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.inlineSuggest.enabled": true,
+  "editor.hover.sticky": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
 
-  "files.insertFinalNewline": true, // ファイルの末尾に自動的に改行を挿入
-  "files.trimFinalNewlines": true, // ファイル末尾の不要な改行を削除
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
 
-  "terminal.integrated.tabs.enabled": true, // ターミナルタブを有効化
+  "terminal.integrated.tabs.enabled": true,
 
-  "workbench.editor.highlightModifiedTabs": true, // 変更されたファイルのタブを強調表示
-  "workbench.editor.closeOnFileDelete": true, // ファイルが削除されたとき、エディタを自動的に閉じる
-  "workbench.tree.expandMode": "singleClick", // シングルクリックでフォルダが展開される
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.tree.expandMode": "singleClick",
 
   // お好みで
-  "javascript.inlayHints.parameterNames.enabled": "all", // JavaScript のインラインヒント（関数の引数名）をすべて表示
-  "typescript.inlayHints.parameterNames.enabled": "all", // TypeScript のインラインヒント（関数の引数名）をすべて表示
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterNames.enabled": "all",
 
-  "workbench.editor.enablePreview": false, // ファイルを開くとき、プレビュー（タブを固定せずに一時的に開く）を無効化
-  "workbench.editor.enablePreviewFromQuickOpen": false, // クイックオープン（Ctrl+P など）から開くときもプレビューを無効化
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
 
   // お試し中
-  "editor.minimap.enabled": false, // エディタの右側に表示されるミニマップ（コードの縮小表示）を無効化
+  "editor.minimap.enabled": false,
 
   // Global Level Config なので User 設定の方に記述する必要アリ
-  "window.newWindowDimensions": "maximized", // 新しいウィンドウを開くときに自動的に最大化する
+  "window.newWindowDimensions": "maximized",
 }
