@@ -1,0 +1,12 @@
+[
+  {
+    // 英字キーボードだと "ctrl+space" で IME 切り替えで衝突しているため
+    "key": "shift+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.quickSwitchWindow"
+  },
+]
