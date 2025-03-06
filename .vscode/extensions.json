@@ -5,11 +5,12 @@
     "eamodio.gitlens",
     "mpontus.tab-cycle",
     "naumovs.color-highlight",
+    "antfu.file-nesting",
 
-    // 日本語非対応だった気がする
+    // I'm not sure it works with Japanese 🫠
     "yoavbls.pretty-ts-errors",
 
-    // お試し中
+    // ========== Now I'm Trying ⬇️ ==========
     "VisualStudioExptTeam.vscodeintellicode",
     "wix.vscode-import-cost",
     "WallabyJs.console-ninja",
