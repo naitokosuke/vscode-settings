@@ -15,8 +15,4 @@
     "key": "cmd+k cmd+w",
     "command": "workbench.action.closeEditorsInGroup"
   },
-  {
-    "key": "cmd+a cmd+k",
-    "command": "aichat.newchataction"
-  },
 ]
