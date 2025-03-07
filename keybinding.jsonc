@@ -9,4 +9,9 @@
     "key": "ctrl+w",
     "command": "workbench.action.quickSwitchWindow"
   },
+  // for Cursor 🤖
+  {
+    "key": "cmd+k cmd+w",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
 ]
