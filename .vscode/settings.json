@@ -21,6 +21,9 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
 
+  // for Cursor 🤖
+  "workbench.activityBar.orientation": "vertical",
+
   // ========== Editor ==========
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
