@@ -5,8 +5,8 @@
   "editor.renderWhitespace": "boundary",
 
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Gruvbox Material Dark",
-  "workbench.preferredLightColorTheme": "Vitesse Light",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "editor.fontFamily": "Input Mono, monospace",
   "workbench.iconTheme": "catppuccin-macchiato",
 
