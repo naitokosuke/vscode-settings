@@ -108,6 +108,8 @@
       ".tours": true,
     },
 
+    "search.showLineNumbers": true,
+
   // ==========  Global Level Config, needs to put in User Settings ==========
   "window.dialogStyle": "custom",
   "window.nativeTabs": true, // macOS only 😇
