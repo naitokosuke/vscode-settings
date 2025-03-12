@@ -32,6 +32,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tabSize": 2,
+  "editor.dragAndDrop": false,
 
   // I prefet "zenkaku extension" ("mosapride.zenkaku") 🙂
   "editor.unicodeHighlight.invisibleCharacters": false,
