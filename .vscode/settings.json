@@ -114,7 +114,6 @@
   "window.dialogStyle": "custom",
   "window.nativeTabs": true, // macOS only 😇
   "window.title": "${rootName}",
-  "window.titleBarStyle": "custom",
   "extensions.autoUpdate": "onlyEnabledExtensions",
 
   // ========== Extension configs ==========
