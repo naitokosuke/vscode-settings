@@ -3,6 +3,7 @@
   "editor.guides.bracketPairs": "active",
   "editor.lineNumbers": "interval",
   "editor.renderWhitespace": "boundary",
+  "editor.hideCursorInOverviewRuler": true,
 
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
@@ -11,6 +12,7 @@
   "workbench.iconTheme": "catppuccin-macchiato",
 
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
   "workbench.fontAliasing": "antialiased",
   "workbench.list.smoothScrolling": true,
 
@@ -37,7 +39,6 @@
   // I prefer "zenkaku extension" ("mosapride.zenkaku") 🙂
   "editor.unicodeHighlight.invisibleCharacters": false,
 
-  "editor.stickyScroll.enabled": true,
   "editor.hover.sticky": true,
 
   "editor.codeActionsOnSave": {
@@ -58,6 +59,8 @@
 
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "explorer.decorations.badges": false,
 
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -108,11 +111,12 @@
       ".tours": true,
     },
 
+    "search.showLineNumbers": true,
+
   // ==========  Global Level Config, needs to put in User Settings ==========
   "window.dialogStyle": "custom",
   "window.nativeTabs": true, // macOS only 😇
   "window.title": "${rootName}",
-  "window.titleBarStyle": "custom",
   "extensions.autoUpdate": "onlyEnabledExtensions",
 
   // ========== Extension configs ==========
