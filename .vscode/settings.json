@@ -34,7 +34,7 @@
   "editor.tabSize": 2,
   "editor.dragAndDrop": false,
 
-  // I prefet "zenkaku extension" ("mosapride.zenkaku") 🙂
+  // I prefer "zenkaku extension" ("mosapride.zenkaku") 🙂
   "editor.unicodeHighlight.invisibleCharacters": false,
 
   "editor.stickyScroll.enabled": true,
