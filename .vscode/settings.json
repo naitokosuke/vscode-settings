@@ -58,6 +58,7 @@
 
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
 
   "git.autofetch": true,
   "git.confirmSync": false,
