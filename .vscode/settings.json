@@ -163,6 +163,8 @@
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
 
+  "githubPullRequests.createOnPublishBranch": "never",
+
   "gitlens.codeLens.enabled": false,
 
   // TBH, I'm not really sure what changes with these 2 settings 😅
