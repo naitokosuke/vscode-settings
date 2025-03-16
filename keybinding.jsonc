@@ -13,6 +13,10 @@
     "key": "alt+a",
     "command": "editor.emmet.action.wrapWithAbbreviation"
   },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.view.extension.roo-cline-ActivityBar"
+  },
 
   // ========== for Cursor 🤖 ==========
   {
