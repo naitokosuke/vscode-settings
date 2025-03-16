@@ -7,6 +7,8 @@
     "naumovs.color-highlight",
     "antfu.file-nesting",
     "artdiniz.quitcontrol-vscode",
+    "jock.svg",
+    "iconify.iconify",
 
     // I'm not sure it works with Japanese 🫠
     "yoavbls.pretty-ts-errors",

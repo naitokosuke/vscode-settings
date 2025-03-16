@@ -224,6 +224,8 @@
 
   "svg.preview.mode": "svg",
 
+  "console-ninja.featureSet": "Community",
+
   // ========== File Nesting ==========
   // Let the extension handle the file nesting setup 🤷‍♂️
   // https://github.com/antfu/vscode-file-nesting-config/tree/main/extension
