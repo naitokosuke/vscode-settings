@@ -16,7 +16,7 @@
     "command": "workbench.action.closeEditorsInGroup"
   },
   {
-    "key": "cmd+k",
+    "key": "cmd+r",
     "command": "cursorai.action.generateInTerminal"
   },
 ]
