@@ -9,6 +9,10 @@
     "key": "ctrl+w",
     "command": "workbench.action.quickSwitchWindow"
   },
+  {
+    "key": "alt+a",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
 
   // ========== for Cursor 🤖 ==========
   {
