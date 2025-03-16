@@ -10,6 +10,7 @@
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "editor.fontFamily": "Input Mono, monospace",
   "workbench.iconTheme": "catppuccin-macchiato",
+  "window.commandCenter": false,
 
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
