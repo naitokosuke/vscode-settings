@@ -232,9 +232,6 @@
   // https://github.com/antfu/vscode-file-nesting-config/tree/main/extension
 
   // ========== Now I'm Trying ⬇️ ==========
-  "javascript.inlayHints.parameterNames.enabled": "all",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
 
