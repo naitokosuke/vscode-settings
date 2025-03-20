@@ -23,6 +23,10 @@
 
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
+  "workbench.editor.empty.hint": "text",
+
+  // TODO: Hide VS Code logo too 🧐
+  "workbench.tips.enabled": false,
 
   // for Cursor 🤖
   "workbench.activityBar.orientation": "vertical",
@@ -232,14 +236,11 @@
   // https://github.com/antfu/vscode-file-nesting-config/tree/main/extension
 
   // ========== Now I'm Trying ⬇️ ==========
-  "javascript.inlayHints.parameterNames.enabled": "all",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
 
   "editor.minimap.enabled": false,
 
   // ==========  Global Level Config, needs to put in User Settings ==========
-  "window.newWindowDimensions": "maximized",
+  "window.newWindowDimensions": "inherit",
 }
