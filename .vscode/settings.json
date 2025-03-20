@@ -25,6 +25,9 @@
   "workbench.tree.expandMode": "singleClick",
   "workbench.editor.empty.hint": "text",
 
+  // TODO: Hide VS Code logo too 🧐
+  "workbench.tips.enabled": false,
+
   // for Cursor 🤖
   "workbench.activityBar.orientation": "vertical",
 
