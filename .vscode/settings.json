@@ -23,6 +23,7 @@
 
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
+  "workbench.editor.empty.hint": "text",
 
   // for Cursor 🤖
   "workbench.activityBar.orientation": "vertical",
