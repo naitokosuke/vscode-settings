@@ -18,6 +18,12 @@
     "command": "workbench.view.extension.roo-cline-ActivityBar"
   },
 
+  // ========== When Explorers open ==========
+  {
+    "key": "alt+cmd+f",
+    "command": "list.find"
+  },
+
   // ========== for Cursor 🤖 ==========
   {
     "key": "cmd+k cmd+w",
