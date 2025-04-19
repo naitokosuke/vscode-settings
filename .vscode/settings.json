@@ -242,6 +242,12 @@
   // Let the extension handle the file nesting setup 🤷‍♂️
   // https://github.com/antfu/vscode-file-nesting-config/tree/main/extension
 
+  // Custom File Nesting Rules For my job 👔
+  // Overwrite the default file nesting rules 😉
+  "explorer.fileNesting.patterns": {
+    "*.vue": "$(capture).*.ts, $(capture).*.js, $(capture).story.vue, $(capture).stories.tsx, $(capture).css",
+  },
+
   // ========== Now I'm Trying ⬇️ ==========
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
