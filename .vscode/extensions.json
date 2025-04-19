@@ -11,6 +11,10 @@
     "iconify.iconify",
     "vsls-contrib.codetour",
 
+    // Themes
+    "Catppuccin.catppuccin-vsc",
+    "Catppuccin.catppuccin-vsc-icons",
+
     // I'm not sure it works with Japanese 🫠
     "yoavbls.pretty-ts-errors",
 
