@@ -9,6 +9,7 @@
     "artdiniz.quitcontrol-vscode",
     "jock.svg",
     "iconify.iconify",
+    "vsls-contrib.codetour",
 
     // I'm not sure it works with Japanese 🫠
     "yoavbls.pretty-ts-errors",
