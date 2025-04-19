@@ -9,14 +9,17 @@
     "artdiniz.quitcontrol-vscode",
     "jock.svg",
     "iconify.iconify",
+    "vsls-contrib.codetour",
+
+    // Themes
+    "Catppuccin.catppuccin-vsc",
+    "Catppuccin.catppuccin-vsc-icons",
 
     // I'm not sure it works with Japanese 🫠
     "yoavbls.pretty-ts-errors",
 
     // ========== Now I'm Trying ⬇️ ==========
     "VisualStudioExptTeam.vscodeintellicode",
-    "wix.vscode-import-cost",
-    "WallabyJs.console-ninja",
     "ChakrounAnas.turbo-console-log",
     "rooveterinaryinc.roo-cline",
     "pflannery.vscode-versionlens",
