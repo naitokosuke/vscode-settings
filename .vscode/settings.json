@@ -232,9 +232,21 @@
 
   "console-ninja.featureSet": "Community",
 
+
+  // ========== Draw.io ==========
+  // For my job 👔
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.appearance": "light",
+
   // ========== File Nesting ==========
   // Let the extension handle the file nesting setup 🤷‍♂️
   // https://github.com/antfu/vscode-file-nesting-config/tree/main/extension
+
+  // Custom File Nesting Rules For my job 👔
+  // Overwrite the default file nesting rules 😉
+  "explorer.fileNesting.patterns": {
+    "*.vue": "$(capture).*.ts, $(capture).*.js, $(capture).story.vue, $(capture).stories.tsx, $(capture).css",
+  },
 
   // ========== Now I'm Trying ⬇️ ==========
   "workbench.editor.enablePreview": false,
