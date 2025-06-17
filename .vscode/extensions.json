@@ -21,8 +21,8 @@
     // ========== Now I'm Trying ⬇️ ==========
     "VisualStudioExptTeam.vscodeintellicode",
     "ChakrounAnas.turbo-console-log",
-    "rooveterinaryinc.roo-cline",
     "pflannery.vscode-versionlens",
     "wraith13.unsaved-files-vscode",
+    "anthropic.claude-code"
   ]
 }
