@@ -29,9 +29,6 @@
   // TODO: Hide VS Code logo too 🧐
   "workbench.tips.enabled": false,
 
-  // for Cursor 🤖
-  "workbench.activityBar.orientation": "vertical",
-
   // ========== Editor ==========
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
@@ -123,7 +120,6 @@
   "window.dialogStyle": "custom",
   "window.nativeTabs": true, // macOS only 😇
   "window.title": "${rootName}",
-  "extensions.autoUpdate": "onlyEnabledExtensions",
 
   // ========== Extension configs ==========
   "emmet.showSuggestionsAsSnippets": true,
@@ -242,11 +238,13 @@
   // Let the extension handle the file nesting setup 🤷‍♂️
   // https://github.com/antfu/vscode-file-nesting-config/tree/main/extension
 
-  // Custom File Nesting Rules For my job 👔
-  // Overwrite the default file nesting rules 😉
-  "explorer.fileNesting.patterns": {
-    "*.vue": "$(capture).*.ts, $(capture).*.js, $(capture).story.vue, $(capture).stories.tsx, $(capture).css",
-  },
+  // ========== My Custom File Nesting Rules ==========
+  // "explorer.fileNesting.patterns": {
+  //   "*.vue": "$(capture).*.ts, $(capture).*.js, $(capture).story.vue, $(capture).stories.tsx, $(capture).css",
+  // "package.json": "*.code-workspace, .browserslist*, .circleci*, .commitlint*, .cspell*, .cursor*, .cz-config.js, .czrc, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitmojirc.json, .gitpod*, .huskyrc*, .jslint*, .knip.*, .lintstagedrc*, .ls-lint.yml, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .oxlintrc.json, .oxlintrc.json.bak, .pm2*, .pnp.*, .pnpm*, .prettier*, .pylintrc, .release-please*.json, .releaserc*, .ruff.toml, .sentry*, .shellcheckrc, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .windsurfrules, .xo-config*, .yamllint*, .yarnrc*, Procfile, apollo.config.*, appveyor*, azure-pipelines*, biome.json*, bower.json, build.config.*, bun.lock, bun.lockb, bunfig.toml, colada.options.ts, commitlint*, crowdin*, cspell*, dangerfile*, dlint.json, dprint.json*, ec.config.*, electron-builder.*, eslint*, firebase.json, grunt*, gulp*, jenkins*, knip.*, lerna*, lint-staged*, nest-cli.*, netlify*, nixpacks*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-please*.json, release-tasks.sh, release.config.*, renovate*, rolldown.config.*, rollup.config.*, rspack*, ruff.toml, sentry.*.config.ts, simple-git-hooks*, sonar-project.properties, stylelint*, tsdown.config.*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, wrangler.*, xo.config.*, yarn*, style-dictionary.json, .mise.toml",
+  //   "schema.graphql": ".graphqlrc.ts, codegen.ts",
+  // },
+
 
   // ========== Now I'm Trying ⬇️ ==========
   "workbench.editor.enablePreview": false,
