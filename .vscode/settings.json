@@ -112,6 +112,7 @@
       "**/CHANGELOG*": true,
       "**/LICENSE*": true,
       ".tours": true,
+      "___naito___/": true,
     },
 
     "search.showLineNumbers": true,
