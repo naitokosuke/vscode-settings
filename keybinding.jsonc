@@ -13,10 +13,6 @@
     "key": "alt+a",
     "command": "editor.emmet.action.wrapWithAbbreviation"
   },
-  {
-    "key": "ctrl+i",
-    "command": "workbench.view.extension.roo-cline-ActivityBar"
-  },
 
   // ========== When Explorers open ==========
   {
@@ -24,13 +20,17 @@
     "command": "list.find"
   },
 
-  // ========== for Cursor 🤖 ==========
+  // ========== for Claude 🤖 ==========
   {
-    "key": "cmd+k cmd+w",
-    "command": "workbench.action.closeEditorsInGroup"
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
   },
   {
-    "key": "cmd+r",
-    "command": "cursorai.action.generateInTerminal"
-  },
+    "key": "ctrl+escape",
+    "command": "claude-code.runClaude.keyboard"
+  }
 ]
