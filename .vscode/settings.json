@@ -227,7 +227,7 @@
 
   "svg.preview.mode": "svg",
 
-  "console-ninja.featureSet": "Community",
+  "prettier.enable": false,
 
 
   // ========== Draw.io ==========
