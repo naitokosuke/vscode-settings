@@ -1,0 +1,40 @@
+name: Update nix-config on VSCode settings change
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.vscode/**'
+      - 'keybinding.jsonc'
+
+jobs:
+  update-nix-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout nix-config
+        uses: actions/checkout@v4
+        with:
+          repository: naitokosuke/nix-config
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Install Nix
+        uses: cachix/install-nix-action@v25
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Update flake
+        run: |
+          nix flake update vscode-settings
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update vscode-settings flake"
+          title: "Update vscode-settings flake"
+          body: |
+            This PR updates the vscode-settings flake input.
+            
+            Triggered by changes in https://github.com/naitokosuke/vscode-settings
+          branch: update-vscode-settings-flake
+          delete-branch: true
