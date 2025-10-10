@@ -25,6 +25,6 @@
   },
   {
     "key": "ctrl+escape",
-    "command": "claude-code.runClaude.keyboard"
+    "command": "claude-vscode.editor.open"
   }
 ]
