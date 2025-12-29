@@ -8,7 +8,7 @@ on:
       - 'keybinding.jsonc'
 
 jobs:
-  update-nix-config:
+  update-dotfiles:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout dotfiles
