@@ -348,6 +348,7 @@
   "editor.minimap.enabled": false,
   "editor.foldingImportsByDefault": true,
   "editor.showFoldingControls": "always",
+  "typescript.referencesCodeLens.enabled": true,
 
   // ==========  Global Level Config, needs to put in User Settings ==========
   "window.newWindowDimensions": "inherit",
