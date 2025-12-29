@@ -249,6 +249,7 @@
 
   "prettier.enable": false,
 
+  "claudeCode.preferredLocation": "panel",
 
   // ========== Draw.io ==========
   // For my job 👔
