@@ -87,6 +87,13 @@
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 5,
 
+  // Custom tab labels for Vue/Nuxt projects
+  "workbench.editor.customLabels.patterns": {
+    "**/index.vue": "${dirname} .../${dirname(1)}",
+    "**/index.{js,ts}": "${dirname} .../${dirname(1)}",
+    "**/{composables,components,utils,types,stores,middleware,plugins,layouts,pages}.{js,ts}": "${dirname}/${filename}.${extname} .../${dirname(1)}"
+  },
+
   // ========== BE CAREFUL TO EXCLUDE ==========
   "search.exclude": {
     //   "**/*.snap": true,
