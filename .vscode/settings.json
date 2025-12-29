@@ -346,6 +346,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
 
   "editor.minimap.enabled": false,
+  "editor.foldingImportsByDefault": true,
 
   // ==========  Global Level Config, needs to put in User Settings ==========
   "window.newWindowDimensions": "inherit",
