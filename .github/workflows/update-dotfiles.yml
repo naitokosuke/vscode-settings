@@ -1,4 +1,4 @@
-name: Update nix-config on VSCode settings change
+name: Update dotfiles on VSCode settings change
 
 on:
   push:
@@ -11,10 +11,10 @@ jobs:
   update-nix-config:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout nix-config
+      - name: Checkout dotfiles
         uses: actions/checkout@v4
         with:
-          repository: naitokosuke/nix-config
+          repository: naitokosuke/dotfiles
           token: ${{ secrets.PAT_TOKEN }}
           
       - name: Install Nix
