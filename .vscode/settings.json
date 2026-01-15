@@ -74,7 +74,7 @@
   "terminal.integrated.defaultProfile.osx": "nu",
   "terminal.integrated.profiles.osx": {
     "nu": {
-      "path": "nu"
+      "path": "/etc/profiles/per-user/naitokosuke/bin/nu"
     }
   },
   "terminal.integrated.cursorBlinking": true,
