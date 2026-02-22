@@ -39,8 +39,9 @@
   "editor.tabSize": 2,
   "editor.dragAndDrop": false,
 
-  // I prefer "zenkaku extension" ("mosapride.zenkaku") 🙂
-  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+  "editor.unicodeHighlight.nonBasicASCII": true,
 
   "editor.hover.sticky": true,
 
@@ -379,7 +380,8 @@
   "typescript.referencesCodeLens.enabled": true,
 
   "[markdown]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "editor.unicodeHighlight.ambiguousCharacters": true
   },
 
   // ==========  Global Level Config, needs to put in User Settings ==========
