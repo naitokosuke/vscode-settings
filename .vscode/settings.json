@@ -122,6 +122,8 @@
       "**/CHANGELOG*": true,
       "**/LICENSE*": true,
       ".tours": true,
+      "**/.devenv": true,
+      "**/.direnv": true,
       "___naito___/": true,
     },
 
@@ -283,6 +285,7 @@
     "CMakeLists.txt": "*.cmake, *.cmake.in, .cmake-format.yaml, CMakePresets.json, CMakeCache.txt",
     "composer.json": ".php*.cache, composer.lock, phpunit.xml*, psalm*.xml",
     "default.nix": "shell.nix",
+    "devenv.nix": "devenv.yaml, devenv.lock, .devenv.flake.nix, .envrc",
     "deno.json*": "*.env, .env.*, .envrc, api-extractor.json, deno.lock, env.d.ts, import-map.json, import_map.json, jsconfig.*, tsconfig.*, tsdoc.*",
     "Dockerfile": "*.dockerfile, .devcontainer.*, .dockerignore, captain-definition, compose.*, docker-compose.*, dockerfile*",
     "flake.nix": "flake.lock",
