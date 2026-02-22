@@ -378,6 +378,10 @@
   "editor.showFoldingControls": "always",
   "typescript.referencesCodeLens.enabled": true,
 
+  "[markdown]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+
   // ==========  Global Level Config, needs to put in User Settings ==========
   "window.newWindowDimensions": "inherit",
 }
