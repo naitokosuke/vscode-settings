@@ -379,7 +379,7 @@
   "typescript.referencesCodeLens.enabled": true,
 
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
 
   // ==========  Global Level Config, needs to put in User Settings ==========
