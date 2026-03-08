@@ -53,8 +53,7 @@
   // auto rename tag, auto close tag
   "editor.linkedEditing": true,
   "html.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
-  "typescript.autoClosingTags": true,
+  "js/ts.autoClosingTags.enabled": true,
 
   "files.eol": "\n",
   "files.insertFinalNewline": true,
