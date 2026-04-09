@@ -253,6 +253,8 @@
 
   "prettier.enable": false,
 
+  "inlineChat.affordance": "off",
+
   "claudeCode.preferredLocation": "panel",
   "claudeCode.useTerminal": true,
 
