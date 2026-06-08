@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import Workspace from "../layout/Workspace.vue";
+import "../style.css";
 </script>
 
 <template>
-  <Workspace>
-    <slot />
-  </Workspace>
+  <slot />
 </template>

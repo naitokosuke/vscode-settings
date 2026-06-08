@@ -6,8 +6,9 @@ lint step, and it's wired into my [`naitokosuke/dotfiles`](https://github.com/na
 Nix environment so a fresh machine boots the same editor.
 
 > [!TIP]
-> Prefer reading over the raw JSON? There's an interactive, VS Code-flavoured walkthrough
-> of this repo under [`docs/`](./docs) — built with Vue 3 + [Void](https://void.app) + Vite+.
+> Prefer reading over raw JSON? There's a documentation site under [`docs/`](./docs) that
+> explains every setting, keybinding, and extension — each linked to its authoritative source.
+> Built with Vue 3 + [Void](https://void.app) + Vite+.
 
 ## Layout
 
@@ -28,7 +29,7 @@ When the config changes here, the [`update-dotfiles`](./.github/workflows/update
 workflow runs `nix flake update vscode-settings` against the dotfiles repo and opens a PR,
 so an edit here reaches the actual machine on the next `darwin-rebuild`.
 
-## The walkthrough app
+## The documentation site
 
 ```sh
 cd docs
@@ -36,6 +37,6 @@ vp install   # or: pnpm install
 vp dev       # start the dev server
 ```
 
-The app reads the real config files straight from this repo at build time
-(`import.meta.glob`), so the walkthrough never drifts from the actual settings.
+The site reads the real config files straight from this repo at build time
+(`import.meta.glob`), so the documentation never drifts from the actual settings.
 See [`docs/CLAUDE.md`](./docs/CLAUDE.md) for the Vite+ toolchain notes.

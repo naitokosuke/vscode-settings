@@ -7,24 +7,6 @@ interface Token {
   readonly text: string;
 }
 
-const NIX_KEYWORDS = new Set([
-  "let",
-  "in",
-  "rec",
-  "if",
-  "then",
-  "else",
-  "with",
-  "inherit",
-  "import",
-  "true",
-  "false",
-  "null",
-  "or",
-  "assert",
-  "builtins",
-]);
-
 const TS_KEYWORDS = new Set([
   "import",
   "from",
@@ -52,14 +34,8 @@ const TS_KEYWORDS = new Set([
   "extends",
   "implements",
   "readonly",
-  "public",
-  "private",
-  "protected",
-  "static",
   "new",
   "this",
-  "super",
-  "void",
   "typeof",
   "as",
   "is",
@@ -69,17 +45,8 @@ const TS_KEYWORDS = new Set([
   "undefined",
   "async",
   "await",
-  "try",
-  "catch",
-  "finally",
-  "throw",
-  "yield",
   "satisfies",
   "keyof",
-  "infer",
-  "never",
-  "any",
-  "unknown",
 ]);
 
 const escapeMap: Readonly<Record<string, string>> = {
@@ -104,84 +71,6 @@ function renderTokens(tokens: readonly Token[]): string {
     }
   }
   return out;
-}
-
-function tokenizeNix(src: string): Token[] {
-  const tokens: Token[] = [];
-  let i = 0;
-  const push = (kind: TokenKind, text: string) => {
-    if (text.length > 0) tokens.push({ kind, text });
-  };
-
-  while (i < src.length) {
-    const ch = src[i]!;
-
-    if (ch === "#") {
-      const end = src.indexOf("\n", i);
-      const stop = end === -1 ? src.length : end;
-      push("com", src.slice(i, stop));
-      i = stop;
-      continue;
-    }
-
-    if (ch === "/" && src[i + 1] === "*") {
-      const end = src.indexOf("*/", i + 2);
-      const stop = end === -1 ? src.length : end + 2;
-      push("com", src.slice(i, stop));
-      i = stop;
-      continue;
-    }
-
-    if (ch === '"') {
-      let j = i + 1;
-      while (j < src.length && src[j] !== '"') {
-        if (src[j] === "\\") j += 2;
-        else j += 1;
-      }
-      j = Math.min(j + 1, src.length);
-      push("str", src.slice(i, j));
-      i = j;
-      continue;
-    }
-
-    if (ch === "'" && src[i + 1] === "'") {
-      let j = i + 2;
-      while (j < src.length - 1 && !(src[j] === "'" && src[j + 1] === "'")) j += 1;
-      j = Math.min(j + 2, src.length);
-      push("str", src.slice(i, j));
-      i = j;
-      continue;
-    }
-
-    if (ch >= "0" && ch <= "9") {
-      let j = i + 1;
-      while (j < src.length && /[0-9.]/.test(src[j]!)) j += 1;
-      push("num", src.slice(i, j));
-      i = j;
-      continue;
-    }
-
-    if (/[A-Za-z_]/.test(ch)) {
-      let j = i + 1;
-      while (j < src.length && /[A-Za-z0-9_'-]/.test(src[j]!)) j += 1;
-      const word = src.slice(i, j);
-      if (NIX_KEYWORDS.has(word)) push("kw", word);
-      else if (src[j] === "=" && src[j + 1] !== "=") push("attr", word);
-      else push("text", word);
-      i = j;
-      continue;
-    }
-
-    if (/[{}[\]();:.,=]/.test(ch)) {
-      push("punct", ch);
-      i += 1;
-      continue;
-    }
-
-    push("text", ch);
-    i += 1;
-  }
-  return tokens;
 }
 
 function tokenizeTs(src: string): Token[] {
@@ -248,7 +137,7 @@ function tokenizeTs(src: string): Token[] {
   return tokens;
 }
 
-function tokenizeJson(src: string): Token[] {
+function tokenizeJson(src: string, allowComments: boolean): Token[] {
   const tokens: Token[] = [];
   let i = 0;
   const push = (kind: TokenKind, text: string) => {
@@ -257,6 +146,22 @@ function tokenizeJson(src: string): Token[] {
 
   while (i < src.length) {
     const ch = src[i]!;
+
+    if (allowComments && ch === "/" && src[i + 1] === "/") {
+      const end = src.indexOf("\n", i);
+      const stop = end === -1 ? src.length : end;
+      push("com", src.slice(i, stop));
+      i = stop;
+      continue;
+    }
+    if (allowComments && ch === "/" && src[i + 1] === "*") {
+      const end = src.indexOf("*/", i + 2);
+      const stop = end === -1 ? src.length : end + 2;
+      push("com", src.slice(i, stop));
+      i = stop;
+      continue;
+    }
+
     if (ch === '"') {
       let j = i + 1;
       while (j < src.length && src[j] !== '"') {
@@ -295,9 +200,20 @@ function tokenizeJson(src: string): Token[] {
   return tokens;
 }
 
+function inlineMd(line: string): string {
+  let out = escapeHtml(line);
+  out = out.replace(/`([^`]+)`/g, '<span class="t-str">`$1`</span>');
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<span class="t-attr">**$1**</span>');
+  out = out.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<span class="t-fn">[$1]</span><span class="t-punct">($2)</span>',
+  );
+  return out;
+}
+
 function highlightMarkdown(src: string): string {
-  const lines = src.split("\n");
-  return lines
+  return src
+    .split("\n")
     .map((line) => {
       if (/^\s*#{1,6}\s/.test(line)) return `<span class="t-kw">${escapeHtml(line)}</span>`;
       if (/^\s*[-*+]\s/.test(line) || /^\s*\d+\.\s/.test(line)) {
@@ -312,25 +228,14 @@ function highlightMarkdown(src: string): string {
     .join("\n");
 }
 
-function inlineMd(line: string): string {
-  let out = escapeHtml(line);
-  out = out.replace(/`([^`]+)`/g, '<span class="t-str">`$1`</span>');
-  out = out.replace(/\*\*([^*]+)\*\*/g, '<span class="t-attr">**$1**</span>');
-  out = out.replace(
-    /\[([^\]]+)\]\(([^)]+)\)/g,
-    '<span class="t-fn">[$1]</span><span class="t-punct">($2)</span>',
-  );
-  return out;
-}
-
 export function highlight(content: string, lang: Lang): string {
   switch (lang) {
-    case "nix":
-      return renderTokens(tokenizeNix(content));
     case "ts":
       return renderTokens(tokenizeTs(content));
     case "json":
-      return renderTokens(tokenizeJson(content));
+      return renderTokens(tokenizeJson(content, false));
+    case "jsonc":
+      return renderTokens(tokenizeJson(content, true));
     case "md":
       return highlightMarkdown(content);
     default:

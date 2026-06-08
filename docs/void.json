@@ -16,7 +16,7 @@
       { "name": "theme-color", "content": "#0a0a0a" },
       {
         "name": "description",
-        "content": "An interactive, VS Code-flavoured walkthrough of @naitokosuke's VS Code configuration — settings, keybindings, and extensions, version-controlled and synced into a Nix dotfiles flake."
+        "content": "A documentation site for @naitokosuke's VS Code configuration — every setting, keybinding, and extension explained, each linked to its authoritative source."
       },
 
       { "property": "og:type", "content": "website" },
@@ -24,7 +24,7 @@
       { "property": "og:title", "content": "naitokosuke / vscode-settings" },
       {
         "property": "og:description",
-        "content": "An interactive walkthrough of a personal VS Code, declared as plain JSON and synced into a Nix dotfiles flake."
+        "content": "Every setting, keybinding, and extension in a personal VS Code config — explained and linked to its source of truth."
       },
       { "property": "og:url", "content": "https://naitokosuke-vscode-settings.void.app/" },
       { "property": "og:image", "content": "https://naitokosuke-vscode-settings.void.app/og.png" },
@@ -43,7 +43,7 @@
       { "name": "twitter:title", "content": "naitokosuke / vscode-settings" },
       {
         "name": "twitter:description",
-        "content": "An interactive walkthrough of a personal VS Code, declared as plain JSON and synced into a Nix dotfiles flake."
+        "content": "Every setting, keybinding, and extension in a personal VS Code config — explained and linked to its source of truth."
       },
       { "name": "twitter:image", "content": "https://naitokosuke-vscode-settings.void.app/og.png" },
       {

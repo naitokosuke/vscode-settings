@@ -1,22 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="vscode-settings">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="vscode-settings">
   <style>
     :root { color-scheme: light dark; }
-    .mark { fill: #08080a; }
-    @media (prefers-color-scheme: dark) { .mark { fill: #f7f7f8; } }
+    .mark { stroke: #0b66c3; }
+    .dot { fill: #0b66c3; }
+    @media (prefers-color-scheme: dark) {
+      .mark { stroke: #5aa2ff; }
+      .dot { fill: #5aa2ff; }
+    }
   </style>
-  <g class="mark">
-    <path fill-rule="evenodd" d="M50 16 a34 34 0 1 0 0.001 0 Z M50 34 a16 16 0 1 0 0.001 0 Z" />
-    <rect id="t" x="44.5" y="4" width="11" height="18" rx="2.5" />
-    <use href="#t" transform="rotate(30, 50, 50)" />
-    <use href="#t" transform="rotate(60, 50, 50)" />
-    <use href="#t" transform="rotate(90, 50, 50)" />
-    <use href="#t" transform="rotate(120, 50, 50)" />
-    <use href="#t" transform="rotate(150, 50, 50)" />
-    <use href="#t" transform="rotate(180, 50, 50)" />
-    <use href="#t" transform="rotate(210, 50, 50)" />
-    <use href="#t" transform="rotate(240, 50, 50)" />
-    <use href="#t" transform="rotate(270, 50, 50)" />
-    <use href="#t" transform="rotate(300, 50, 50)" />
-    <use href="#t" transform="rotate(330, 50, 50)" />
+  <g fill="none" stroke-width="2" stroke-linecap="round">
+    <line class="mark" x1="4" y1="7" x2="20" y2="7" />
+    <line class="mark" x1="4" y1="17" x2="20" y2="17" />
   </g>
+  <circle class="dot" cx="9" cy="7" r="3" />
+  <circle class="dot" cx="15" cy="17" r="3" />
 </svg>
