@@ -12,21 +12,20 @@ const extLink = icons.externalLink({ size: 13 });
 
 <template>
   <div class="setting-row">
-    <div class="setting-head">
-      <code class="setting-key">{{ setting.key }}</code>
-      <code v-if="setting.value" class="setting-value">{{ setting.value }}</code>
-    </div>
+    <p class="head">
+      <code>{{ setting.key }}</code>
+      <code v-if="setting.value" class="val">{{ setting.value }}</code>
+    </p>
     <p class="summary" v-html="summaryHtml" />
     <p v-if="setting.refs?.length" class="refs">
       <a
         v-for="ref in setting.refs"
         :key="ref.url"
-        class="ref-link"
         :href="ref.url"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {{ ref.label }}<span class="ref-ic" v-html="extLink" />
+        {{ ref.label }}<span v-html="extLink" />
       </a>
     </p>
   </div>
@@ -37,77 +36,73 @@ const extLink = icons.externalLink({ size: 13 });
   padding: 20px 0;
   border-top: 1px solid var(--rule);
 
-  &:first-child {
-    border-top: 0;
-  }
-}
+  /* Key + value. */
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 12px;
+    margin: 0 0 8px;
 
-.setting-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 6px 12px;
-  margin-bottom: 8px;
-}
+    /* Key — bold mono ink, no chip, no fill. */
+    code {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--fg-strong);
+      overflow-wrap: anywhere;
+    }
 
-/* Key as bold mono ink, underlined by a hairline — no chip, no fill. */
-.setting-key {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--fg-strong);
-  overflow-wrap: anywhere;
-}
+    .val {
+      font-weight: 400;
+      font-size: 12.5px;
+      color: var(--fg-muted);
 
-.setting-value {
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  color: var(--fg-muted);
-  overflow-wrap: anywhere;
-
-  &::before {
-    content: "= ";
-    color: var(--fg-faint);
-  }
-}
-
-.summary {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--fg);
-  max-width: 70ch;
-  text-wrap: pretty;
-}
-
-.refs {
-  margin: 10px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 18px;
-}
-
-.ref-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  color: var(--accent);
-  border-bottom: 1px solid var(--rule-strong);
-  padding-bottom: 1px;
-
-  .ref-ic {
-    display: inline-flex;
-    opacity: 0.7;
+      &::before {
+        content: "= ";
+        color: var(--fg-faint);
+      }
+    }
   }
 
-  &:hover {
-    color: var(--accent-strong);
-    text-decoration: none;
-    border-bottom-color: currentColor;
+  .summary {
+    margin: 0;
+    max-width: 70ch;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--fg);
+    text-wrap: pretty;
+  }
 
-    .ref-ic {
-      opacity: 1;
+  .refs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    margin: 10px 0 0;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--rule-strong);
+      padding-bottom: 1px;
+
+      span {
+        display: inline-flex;
+        opacity: 0.7;
+      }
+
+      &:hover {
+        color: var(--accent-strong);
+        text-decoration: none;
+        border-bottom-color: currentColor;
+
+        span {
+          opacity: 1;
+        }
+      }
     }
   }
 }
