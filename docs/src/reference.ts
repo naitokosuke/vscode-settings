@@ -29,7 +29,7 @@ export const configDocs: readonly ConfigDoc[] = [
     title: "settings.json",
     tagline: "The whole editor, declared in one place.",
     intro:
-      "This is the heart of the repo. It's a single, heavily-sectioned `settings.json` organised by `// ====` banners — Visuals, Editor, Git, Terminal, Search, extension configs, and File Nesting. The whole thing leans toward a quiet, minimal, keyboard-first editor that matches the surrounding Nix/Nushell environment. As a *workspace* settings file it applies to anyone who opens the repo; a few keys are flagged as belonging in User settings.",
+      "This is the heart of the repo: a single workspace `settings.json` that declares the whole VS Code experience, from how the window looks to how files are saved. It leans toward a quiet, minimal, keyboard-first editor that matches the surrounding Nix/Nushell environment. As a *workspace* settings file it applies to anyone who opens the repo; a few keys are flagged as belonging in User settings.",
     primaryRef: { label: "VS Code · Settings", url: VSCODE_SETTINGS },
     groups: [
       {
@@ -486,7 +486,7 @@ export const configDocs: readonly ConfigDoc[] = [
     title: "extensions.json",
     tagline: "The curated recommendation set VS Code offers on open.",
     intro:
-      "Open the repo and VS Code offers to install exactly this set. It's a tight, intentional toolbelt — inline diagnostics, spell-checking, Git insight, the Catppuccin theme + icons — with a fenced-off 'Now I'm Trying' block for extensions still on probation. Each link goes to the extension's Marketplace page.",
+      "Open the repo and VS Code offers to install exactly this set. It's a tight, intentional toolbelt — inline diagnostics, spell-checking, Git insight, the Catppuccin theme + icons — alongside a few extensions still being trialed. Each link goes to the extension's Marketplace page.",
     primaryRef: {
       label: "VS Code · Workspace recommended extensions",
       url: "https://code.visualstudio.com/docs/editor/extension-marketplace#_workspace-recommended-extensions",
@@ -567,8 +567,8 @@ export const configDocs: readonly ConfigDoc[] = [
       },
       {
         id: "trying",
-        title: "On probation — “Now I'm Trying”",
-        intro: "Fenced off in the file so a keeper is easy to promote and a dud easy to drop.",
+        title: "On probation",
+        intro: "Extensions still being trialed — easy to promote a keeper or drop a dud.",
         settings: [
           {
             key: "yoavbls.pretty-ts-errors",
