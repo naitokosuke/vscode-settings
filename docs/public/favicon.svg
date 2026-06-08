@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="vscode-settings">
+  <style>
+    :root { color-scheme: light dark; }
+    .mark { stroke: #000000; }
+    .dot { fill: #000000; }
+    @media (prefers-color-scheme: dark) {
+      .mark { stroke: #ffffff; }
+      .dot { fill: #ffffff; }
+    }
+  </style>
+  <g fill="none" stroke-width="2" stroke-linecap="round">
+    <line class="mark" x1="4" y1="7" x2="20" y2="7" />
+    <line class="mark" x1="4" y1="17" x2="20" y2="17" />
+  </g>
+  <circle class="dot" cx="9" cy="7" r="3" />
+  <circle class="dot" cx="15" cy="17" r="3" />
+</svg>

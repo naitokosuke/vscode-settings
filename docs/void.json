@@ -1,0 +1,60 @@
+{
+  "sourceDir": "src",
+  "worker": {
+    "compatibility_date": "2026-02-24"
+  },
+  "head": {
+    "title": "naitokosuke / vscode-settings",
+    "htmlAttrs": { "lang": "en" },
+    "meta": [
+      { "charset": "utf-8" },
+      {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1.0, viewport-fit=cover"
+      },
+      { "name": "color-scheme", "content": "dark light" },
+      { "name": "theme-color", "content": "#0a0a0a" },
+      {
+        "name": "description",
+        "content": "A documentation site for @naitokosuke's VS Code configuration — every setting, keybinding, and extension explained, each linked to its authoritative source."
+      },
+
+      { "property": "og:type", "content": "website" },
+      { "property": "og:site_name", "content": "naitokosuke / vscode-settings" },
+      { "property": "og:title", "content": "naitokosuke / vscode-settings" },
+      {
+        "property": "og:description",
+        "content": "Every setting, keybinding, and extension in a personal VS Code config — explained and linked to its source of truth."
+      },
+      { "property": "og:url", "content": "https://naitokosuke-vscode-settings.void.app/" },
+      { "property": "og:image", "content": "https://naitokosuke-vscode-settings.void.app/og.png" },
+      { "property": "og:image:type", "content": "image/png" },
+      { "property": "og:image:width", "content": "1200" },
+      { "property": "og:image:height", "content": "630" },
+      {
+        "property": "og:image:alt",
+        "content": "naitokosuke / vscode-settings — a personal VS Code configuration as plain JSON."
+      },
+      { "property": "og:locale", "content": "en_US" },
+
+      { "name": "twitter:card", "content": "summary_large_image" },
+      { "name": "twitter:site", "content": "@naitokosuke" },
+      { "name": "twitter:creator", "content": "@naitokosuke" },
+      { "name": "twitter:title", "content": "naitokosuke / vscode-settings" },
+      {
+        "name": "twitter:description",
+        "content": "Every setting, keybinding, and extension in a personal VS Code config — explained and linked to its source of truth."
+      },
+      { "name": "twitter:image", "content": "https://naitokosuke-vscode-settings.void.app/og.png" },
+      {
+        "name": "twitter:image:alt",
+        "content": "naitokosuke / vscode-settings — a personal VS Code configuration as plain JSON."
+      }
+    ],
+    "link": [
+      { "rel": "icon", "href": "/favicon.ico", "sizes": "32x32" },
+      { "rel": "icon", "type": "image/svg+xml", "href": "/favicon.svg" },
+      { "rel": "canonical", "href": "https://naitokosuke-vscode-settings.void.app/" }
+    ]
+  }
+}
