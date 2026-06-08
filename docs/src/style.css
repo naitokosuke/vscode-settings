@@ -17,32 +17,33 @@
 
   color-scheme: light dark;
 
-  /* Paper & ink — warm, not the cool-grey of a template. */
-  --bg: light-dark(#faf8f3, #14130f);
-  --bg-sunken: light-dark(#f2efe7, #1b1a15);
+  /* Pure monochrome — ink on paper, no hue anywhere. */
+  --bg: light-dark(#ffffff, #0a0a0a);
+  --bg-sunken: light-dark(#f4f4f4, #161616);
 
-  --fg: light-dark(#2a2722, #e7e2d6);
-  --fg-strong: light-dark(#16140f, #f6f2e8);
-  --fg-muted: light-dark(#6b6557, #9b9384);
-  --fg-faint: light-dark(#9a9384, #6a6457);
+  --fg: light-dark(#1a1a1a, #e6e6e6);
+  --fg-strong: light-dark(#000000, #ffffff);
+  --fg-muted: light-dark(#666666, #9a9a9a);
+  --fg-faint: light-dark(#999999, #666666);
 
   /* Hairlines do the structural work. */
-  --rule: light-dark(#e4dfd3, #2a271f);
-  --rule-strong: light-dark(#cdc6b6, #3a362c);
+  --rule: light-dark(#e4e4e4, #262626);
+  --rule-strong: light-dark(#c8c8c8, #3a3a3a);
 
-  /* A single restrained ink accent, used on links only — never as a fill. */
-  --accent: light-dark(#7a4a2f, #c89b6a);
-  --accent-strong: light-dark(#5e3620, #dcb487);
+  /* "Accent" is just ink — links are emphasised by weight/underline,
+     never by colour. */
+  --accent: light-dark(#000000, #ffffff);
+  --accent-strong: light-dark(#000000, #ffffff);
 
-  /* Muted syntax — closer to printed code than a neon theme. */
-  --syn-kw: light-dark(#7a4a2f, #c89b6a);
-  --syn-str: light-dark(#4a6b4a, #9bb89b);
-  --syn-num: light-dark(#5a6b8c, #9bb0d8);
-  --syn-com: light-dark(#9a9384, #6a6457);
-  --syn-attr: light-dark(#16140f, #f6f2e8);
-  --syn-fn: light-dark(#5e3620, #dcb487);
-  --syn-tag: light-dark(#6b6557, #9b9384);
-  --syn-punct: light-dark(#9a9384, #8a8474);
+  /* Grayscale syntax — weight and shade instead of hue. */
+  --syn-kw: light-dark(#000000, #ffffff);
+  --syn-str: light-dark(#555555, #b0b0b0);
+  --syn-num: light-dark(#555555, #b0b0b0);
+  --syn-com: light-dark(#999999, #666666);
+  --syn-attr: light-dark(#000000, #ffffff);
+  --syn-fn: light-dark(#1a1a1a, #e6e6e6);
+  --syn-tag: light-dark(#666666, #9a9a9a);
+  --syn-punct: light-dark(#888888, #777777);
 
   --header-h: 58px;
   --easing: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -61,7 +62,7 @@
   scrollbar-width: thin;
 
   &::selection {
-    background: light-dark(#e8dcc4, #3a3324);
+    background: light-dark(#dcdcdc, #333333);
   }
 }
 

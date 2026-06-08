@@ -107,7 +107,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", onKey));
       inset: var(--header-h) 0 0 0;
       z-index: 24;
       border: 0;
-      background: light-dark(rgba(20, 19, 15, 0.28), rgba(0, 0, 0, 0.5));
+      background: light-dark(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.5));
       opacity: 0;
       pointer-events: none;
       transition: opacity 200ms var(--easing);

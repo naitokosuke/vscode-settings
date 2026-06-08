@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="vscode-settings">
   <style>
     :root { color-scheme: light dark; }
-    .mark { stroke: #0b66c3; }
-    .dot { fill: #0b66c3; }
+    .mark { stroke: #000000; }
+    .dot { fill: #000000; }
     @media (prefers-color-scheme: dark) {
-      .mark { stroke: #5aa2ff; }
-      .dot { fill: #5aa2ff; }
+      .mark { stroke: #ffffff; }
+      .dot { fill: #ffffff; }
     }
   </style>
   <g fill="none" stroke-width="2" stroke-linecap="round">
