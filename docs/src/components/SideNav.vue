@@ -21,12 +21,11 @@ const items = computed(() =>
 
 <template>
   <aside id="site-nav" class="side-nav" :class="{ open }" aria-label="Configuration files">
-    <nav class="side-nav-scroll">
-      <p class="side-nav-eyebrow">Configuration files</p>
-      <ul class="toc">
+    <nav>
+      <p>Configuration files</p>
+      <ul>
         <li v-for="item in items" :key="item.id">
           <Link
-            class="toc-link"
             :class="{ active: item.active }"
             :href="item.href"
             view-transition
@@ -52,55 +51,54 @@ const items = computed(() =>
   height: calc(100dvh - var(--header-h));
   border-right: 1px solid var(--rule);
   background: var(--bg);
-}
 
-.side-nav-scroll {
-  height: 100%;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: 26px 20px 48px 2px;
-}
-
-.side-nav-eyebrow {
-  margin: 0 0 16px;
-  padding-inline-start: 15px;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 13px;
-  color: var(--fg-faint);
-}
-
-.toc {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.toc-link {
-  display: block;
-  padding: 7px 0 7px 15px;
-  border-left: 1px solid var(--rule);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--fg-muted);
-
-  &:hover {
-    text-decoration: none;
-    color: var(--accent);
-    border-left-color: var(--rule-strong);
+  nav {
+    height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 26px 20px 48px 2px;
   }
-  /* Active page: bold ink + a solid hairline marker, no fill. */
-  &.active {
-    color: var(--fg-strong);
-    font-weight: 700;
-    border-left-color: var(--fg-strong);
-  }
-}
 
-/* Drawer on narrow viewports. */
-@media (--tablet) {
-  .side-nav {
+  /* Eyebrow. */
+  p {
+    margin: 0 0 16px;
+    padding-inline-start: 15px;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--fg-faint);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    padding: 7px 0 7px 15px;
+    border-left: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fg-muted);
+
+    &:hover {
+      text-decoration: none;
+      color: var(--accent);
+      border-left-color: var(--rule-strong);
+    }
+    /* Active page: bold ink + a solid hairline marker, no fill. */
+    &.active {
+      color: var(--fg-strong);
+      font-weight: 700;
+      border-left-color: var(--fg-strong);
+    }
+  }
+
+  /* Drawer on narrow viewports. */
+  @media (--tablet) {
     position: fixed;
     inset: var(--header-h) auto 0 0;
     z-index: 25;
@@ -112,12 +110,11 @@ const items = computed(() =>
     &.open {
       translate: 0 0;
     }
-  }
 
-  .side-nav-scroll {
-    padding-right: 16px;
-    padding-left: 6px;
-    background: var(--bg);
+    nav {
+      padding-right: 16px;
+      padding-left: 6px;
+    }
   }
 }
 </style>

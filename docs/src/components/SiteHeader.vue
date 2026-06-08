@@ -12,7 +12,6 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
 <template>
   <header class="site-header">
     <button
-      class="nav-toggle"
       type="button"
       :aria-expanded="navOpen"
       aria-controls="site-nav"
@@ -23,14 +22,12 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
     </button>
 
     <Link class="wordmark" href="/" view-transition aria-label="vscode-settings — home">
-      <span class="wordmark-mark" v-html="icons.sliders({ size: 20 })" />
-      <span class="wordmark-text"><b>vscode</b>-settings</span>
+      <span v-html="icons.sliders({ size: 20 })" />
+      <span><b>vscode</b>-settings</span>
     </Link>
 
-    <div class="spacer" />
-
-    <nav class="header-actions" aria-label="site">
-      <a class="ghost-link" :href="repoUrl" target="_blank" rel="noopener">
+    <nav aria-label="site">
+      <a :href="repoUrl" target="_blank" rel="noopener">
         <span v-html="icons.github({ size: 17 })" />
         <span class="hide-narrow">GitHub</span>
       </a>
@@ -46,81 +43,78 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
   position: sticky;
   top: 0;
   z-index: 30;
-  height: var(--header-h);
   display: flex;
   align-items: center;
   gap: 14px;
+  height: var(--header-h);
   padding-inline: clamp(16px, 3vw, 32px);
   background: var(--bg);
   border-bottom: 1px solid var(--rule);
-}
 
-.nav-toggle {
-  display: none;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  color: var(--fg-muted);
-
-  &:hover {
-    color: var(--fg-strong);
-  }
-}
-
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--fg-strong);
-  font-family: var(--font-mono);
-  font-size: 14px;
-  letter-spacing: -0.01em;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  .wordmark-mark {
-    display: inline-flex;
+  /* Mobile nav toggle — hidden until the sidebar becomes a drawer. */
+  > button {
+    display: none;
+    place-items: center;
+    width: 32px;
+    height: 32px;
     color: var(--fg-muted);
-  }
-
-  .wordmark-text b {
-    font-weight: 700;
-  }
-}
-
-.spacer {
-  flex: 1 1 auto;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  .ghost-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    color: var(--fg-muted);
-    font-size: 14px;
-    transition: color 160ms var(--easing);
-
-    span {
-      display: inline-flex;
-    }
 
     &:hover {
       color: var(--fg-strong);
-      text-decoration: none;
+    }
+
+    @media (--tablet) {
+      display: grid;
     }
   }
-}
 
-@media (--tablet) {
-  .nav-toggle {
-    display: grid;
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    color: var(--fg-strong);
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    /* The sliders mark. */
+    span:first-child {
+      display: inline-flex;
+      color: var(--fg-muted);
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: auto;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 14px;
+      color: var(--fg-muted);
+      transition: color 160ms var(--easing);
+
+      span {
+        display: inline-flex;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: var(--fg-strong);
+      }
+    }
   }
 }
 

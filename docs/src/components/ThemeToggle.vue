@@ -14,7 +14,7 @@ const label = computed(() => `Theme: ${theme.value} (click to change)`);
 <template>
   <button class="theme-toggle" type="button" :aria-label="label" :title="label" @click="cycle">
     <span v-html="glyph" />
-    <span class="theme-tag">{{ theme }}</span>
+    {{ theme }}
   </button>
 </template>
 
@@ -23,16 +23,13 @@ const label = computed(() => `Theme: ${theme.value} (click to change)`);
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  font-size: 14px;
+  text-transform: capitalize;
   color: var(--fg-muted);
   transition: color 160ms var(--easing);
 
   span {
     display: inline-flex;
-  }
-
-  .theme-tag {
-    font-size: 14px;
-    text-transform: capitalize;
   }
 
   &:hover {

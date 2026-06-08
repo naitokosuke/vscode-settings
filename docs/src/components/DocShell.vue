@@ -31,16 +31,16 @@ onBeforeUnmount(() => document.removeEventListener("keydown", onKey));
         aria-label="Close navigation"
         @click="closeNav"
       />
-      <main class="content">
+      <main>
         <slot />
-        <footer class="site-footer">
+        <footer>
           <p>
             Documentation for
             <a href="https://github.com/naitokosuke/vscode-settings" target="_blank" rel="noopener"
               >naitokosuke/vscode-settings</a
             >.
           </p>
-          <p class="footer-built">Built with Vue, Void, and Vite+.</p>
+          <p>Built with Vue, Void, and Vite+.</p>
         </footer>
       </main>
     </div>
@@ -61,62 +61,62 @@ onBeforeUnmount(() => document.removeEventListener("keydown", onKey));
   align-items: start;
   max-width: 1400px;
   margin: 0 auto;
-}
 
-.content {
-  grid-area: content;
-  width: 100%;
-  max-width: 860px;
-  margin-inline: auto;
-  padding-inline: clamp(18px, 4vw, 56px);
-  padding-bottom: 64px;
-  min-width: 0;
-}
-
-.site-footer {
-  margin-top: 24px;
-  padding-top: 30px;
-  border-top: 1px solid var(--rule);
-  font-size: 14px;
-  color: var(--fg-muted);
-
-  p {
-    margin: 0 0 6px;
-    max-width: 68ch;
+  main {
+    grid-area: content;
+    width: 100%;
+    max-width: 860px;
+    min-width: 0;
+    margin-inline: auto;
+    padding-inline: clamp(18px, 4vw, 56px);
+    padding-bottom: 64px;
   }
-  .footer-built {
-    margin-top: 10px;
-    font-family: var(--font-serif);
-    font-style: italic;
-    color: var(--fg-faint);
-    font-size: 13px;
+
+  footer {
+    margin-top: 24px;
+    padding-top: 30px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--fg-muted);
+
+    p {
+      margin: 0 0 6px;
+      max-width: 68ch;
+    }
+    /* Build credit. */
+    p:last-child {
+      margin-top: 10px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--fg-faint);
+    }
   }
-}
 
-.nav-backdrop {
-  display: none;
-}
+  /* Drawer backdrop — only present once the nav becomes an overlay. */
+  .nav-backdrop {
+    display: none;
+  }
 
-@media (--tablet) {
-  .body {
+  @media (--tablet) {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "content";
-  }
 
-  .nav-backdrop {
-    position: fixed;
-    inset: var(--header-h) 0 0 0;
-    z-index: 24;
-    border: 0;
-    background: light-dark(rgba(20, 19, 15, 0.28), rgba(0, 0, 0, 0.5));
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 200ms var(--easing);
+    .nav-backdrop {
+      position: fixed;
+      inset: var(--header-h) 0 0 0;
+      z-index: 24;
+      border: 0;
+      background: light-dark(rgba(20, 19, 15, 0.28), rgba(0, 0, 0, 0.5));
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms var(--easing);
 
-    &.show {
-      display: block;
-      opacity: 1;
-      pointer-events: auto;
+      &.show {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 }
