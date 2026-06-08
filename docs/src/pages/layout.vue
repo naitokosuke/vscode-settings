@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import DocShell from "../components/DocShell.vue";
 import "../style.css";
 </script>
 
 <template>
-  <slot />
+  <DocShell>
+    <slot />
+  </DocShell>
 </template>

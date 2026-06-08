@@ -34,8 +34,8 @@ const extLink = icons.externalLink({ size: 13 });
 
 <style scoped>
 .setting-row {
-  padding: 16px 0;
-  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
 
   &:first-child {
     border-top: 0;
@@ -46,19 +46,16 @@ const extLink = icons.externalLink({ size: 13 });
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 8px;
-  margin-bottom: 6px;
+  gap: 6px 12px;
+  margin-bottom: 8px;
 }
 
+/* Key as bold mono ink, underlined by a hairline — no chip, no fill. */
 .setting-key {
   font-family: var(--font-mono);
-  font-size: 13.5px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   color: var(--fg-strong);
-  padding: 2px 7px;
-  border-radius: 6px;
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-line);
   overflow-wrap: anywhere;
 }
 
@@ -66,17 +63,18 @@ const extLink = icons.externalLink({ size: 13 });
   font-family: var(--font-mono);
   font-size: 12.5px;
   color: var(--fg-muted);
-  padding: 2px 6px;
-  border-radius: 6px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
   overflow-wrap: anywhere;
+
+  &::before {
+    content: "= ";
+    color: var(--fg-faint);
+  }
 }
 
 .summary {
   margin: 0;
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--fg);
   max-width: 70ch;
   text-wrap: pretty;
@@ -86,25 +84,27 @@ const extLink = icons.externalLink({ size: 13 });
   margin: 10px 0 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 14px;
+  gap: 4px 18px;
 }
 
 .ref-link {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 12.5px;
-  font-weight: 500;
+  font-size: 13px;
   color: var(--accent);
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
 
   .ref-ic {
     display: inline-flex;
-    opacity: 0.75;
+    opacity: 0.7;
   }
 
   &:hover {
     color: var(--accent-strong);
     text-decoration: none;
+    border-bottom-color: currentColor;
 
     .ref-ic {
       opacity: 1;

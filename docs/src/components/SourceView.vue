@@ -28,10 +28,9 @@ const lineNumbers = computed(() =>
 
 <style scoped>
 .source-view {
-  margin-top: 18px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
+  margin-top: 22px;
+  border: 1px solid var(--rule);
+  background: var(--bg);
   overflow: hidden;
 }
 
@@ -49,7 +48,7 @@ summary {
     display: none;
   }
   &:hover {
-    background: var(--surface-2);
+    background: var(--bg-sunken);
   }
 
   .source-label {
@@ -82,8 +81,8 @@ summary {
 }
 
 .source-body {
-  border-top: 1px solid var(--border);
-  background: var(--bg-soft);
+  border-top: 1px solid var(--rule);
+  background: var(--bg-sunken);
   max-height: 70dvh;
   overflow: auto;
 }

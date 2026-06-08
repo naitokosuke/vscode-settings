@@ -23,31 +23,20 @@ const label = computed(() => `Theme: ${theme.value} (click to change)`);
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  height: 32px;
-  padding: 0 10px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
   color: var(--fg-muted);
-  background: var(--surface);
-  transition:
-    color 160ms var(--easing),
-    border-color 160ms var(--easing),
-    background 160ms var(--easing);
+  transition: color 160ms var(--easing);
 
   span {
     display: inline-flex;
   }
 
   .theme-tag {
-    font-size: 12px;
-    letter-spacing: 0.02em;
+    font-size: 14px;
     text-transform: capitalize;
   }
 
   &:hover {
     color: var(--fg-strong);
-    border-color: var(--border-strong);
-    background: var(--surface-2);
   }
 }
 </style>

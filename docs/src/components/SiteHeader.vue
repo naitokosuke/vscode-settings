@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Link } from "@void/vue";
 import { icons } from "../icons.ts";
 import ThemeToggle from "./ThemeToggle.vue";
 
@@ -21,10 +22,10 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
       <span v-html="navOpen ? icons.close({ size: 20 }) : icons.menu({ size: 20 })" />
     </button>
 
-    <a class="wordmark" href="#top" aria-label="vscode-settings — home">
+    <Link class="wordmark" href="/" view-transition aria-label="vscode-settings — home">
       <span class="wordmark-mark" v-html="icons.sliders({ size: 20 })" />
       <span class="wordmark-text"><b>vscode</b>-settings</span>
-    </a>
+    </Link>
 
     <div class="spacer" />
 
@@ -48,24 +49,21 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
   height: var(--header-h);
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding-inline: clamp(14px, 3vw, 28px);
-  background: light-dark(rgba(252, 252, 253, 0.82), rgba(14, 17, 22, 0.82));
-  backdrop-filter: blur(12px) saturate(140%);
-  border-bottom: 1px solid var(--border);
+  gap: 14px;
+  padding-inline: clamp(16px, 3vw, 32px);
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
 }
 
 .nav-toggle {
   display: none;
   place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
   color: var(--fg-muted);
 
   &:hover {
     color: var(--fg-strong);
-    background: var(--surface-2);
   }
 }
 
@@ -74,7 +72,8 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
   align-items: center;
   gap: 9px;
   color: var(--fg-strong);
-  font-size: 15px;
+  font-family: var(--font-mono);
+  font-size: 14px;
   letter-spacing: -0.01em;
 
   &:hover {
@@ -83,7 +82,7 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
 
   .wordmark-mark {
     display: inline-flex;
-    color: var(--accent);
+    color: var(--fg-muted);
   }
 
   .wordmark-text b {
@@ -98,23 +97,15 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 18px;
 
   .ghost-link {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    height: 32px;
-    padding: 0 11px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-    background: var(--surface);
     color: var(--fg-muted);
-    font-size: 13px;
-    transition:
-      color 160ms var(--easing),
-      border-color 160ms var(--easing),
-      background 160ms var(--easing);
+    font-size: 14px;
+    transition: color 160ms var(--easing);
 
     span {
       display: inline-flex;
@@ -122,8 +113,6 @@ const repoUrl = "https://github.com/naitokosuke/vscode-settings";
 
     &:hover {
       color: var(--fg-strong);
-      border-color: var(--border-strong);
-      background: var(--surface-2);
       text-decoration: none;
     }
   }

@@ -1,15 +1,8 @@
 import type { Lang, RawFile } from "./types.ts";
 
 const rawModules = {
-  ...import.meta.glob("../../README.md", { eager: true, query: "?raw", import: "default" }),
-  ...import.meta.glob("../../CLAUDE.md", { eager: true, query: "?raw", import: "default" }),
   ...import.meta.glob("../../keybinding.jsonc", { eager: true, query: "?raw", import: "default" }),
   ...import.meta.glob("../../.vscode/*.json", { eager: true, query: "?raw", import: "default" }),
-  ...import.meta.glob("../../.github/workflows/*.yml", {
-    eager: true,
-    query: "?raw",
-    import: "default",
-  }),
 } as Record<string, string>;
 
 const langByExt: Readonly<Record<string, Lang>> = {

@@ -13,17 +13,12 @@ const extLink = icons.externalLink({ size: 13 });
 </script>
 
 <template>
-  <article :id="doc.id" class="config-article" :data-spy-id="doc.id">
+  <article class="config-article">
     <header class="article-head">
       <p class="article-path">
         <code>{{ doc.path }}</code>
       </p>
-      <h2 class="article-title">
-        <a :href="`#${doc.id}`" class="anchor" aria-label="Link to this section">
-          <span v-html="icons.link({ size: 16 })" />
-        </a>
-        {{ doc.title }}
-      </h2>
+      <h1 class="article-title">{{ doc.title }}</h1>
       <p class="article-tagline">{{ doc.tagline }}</p>
       <div class="prose article-intro" v-html="introHtml" />
       <a
@@ -37,19 +32,8 @@ const extLink = icons.externalLink({ size: 13 });
       </a>
     </header>
 
-    <section
-      v-for="group in doc.groups"
-      :id="`${doc.id}--${group.id}`"
-      :key="group.id"
-      class="group"
-      :data-spy-id="`${doc.id}--${group.id}`"
-    >
-      <h3 class="group-title">
-        <a :href="`#${doc.id}--${group.id}`" class="anchor" aria-label="Link to this group">
-          <span v-html="icons.link({ size: 14 })" />
-        </a>
-        {{ group.title }}
-      </h3>
+    <section v-for="group in doc.groups" :key="group.id" class="group">
+      <h2 class="group-title">{{ group.title }}</h2>
       <p v-if="group.intro" class="group-intro">{{ group.intro }}</p>
       <div class="settings">
         <SettingRow v-for="s in group.settings" :key="s.key" :setting="s" />
@@ -62,56 +46,51 @@ const extLink = icons.externalLink({ size: 13 });
 
 <style scoped>
 .config-article {
-  padding-block: clamp(40px, 6vw, 72px);
-  border-top: 1px solid var(--border);
-
-  &:first-child {
-    border-top: 0;
-  }
+  padding-block: clamp(36px, 5vw, 64px) clamp(44px, 6vw, 80px);
 }
 
 .article-head {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .article-path {
-  margin: 0 0 10px;
+  margin: 0 0 14px;
 
   code {
     font-family: var(--font-mono);
     font-size: 12px;
-    color: var(--fg-muted);
-    padding: 3px 9px;
-    border-radius: 999px;
-    background: var(--surface-2);
-    border: 1px solid var(--border);
+    letter-spacing: 0.02em;
+    color: var(--fg-faint);
   }
 }
 
 .article-title {
   position: relative;
   margin: 0;
-  font-size: clamp(26px, 3.4vw, 38px);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  font-weight: 600;
   color: var(--fg-strong);
 }
 
 .article-tagline {
-  margin: 8px 0 0;
-  font-size: clamp(15px, 1.5vw, 18px);
+  margin: 12px 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(16px, 1.6vw, 20px);
   color: var(--fg-muted);
+  max-width: 60ch;
 }
 
 .article-intro {
-  margin-top: 18px;
-  max-width: 72ch;
+  margin-top: 20px;
+  max-width: 70ch;
 
   :deep(p) {
-    margin: 0 0 0.85em;
-    font-size: 15.5px;
-    line-height: 1.7;
+    margin: 0 0 0.9em;
+    font-size: 16px;
+    line-height: 1.75;
     color: var(--fg);
     text-wrap: pretty;
 
@@ -121,73 +100,50 @@ const extLink = icons.externalLink({ size: 13 });
   }
 }
 
+/* Primary reference as a plain underlined link, not a button. */
 .primary-ref {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  margin-top: 16px;
-  padding: 7px 13px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--accent-line);
-  background: var(--accent-soft);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--accent-strong);
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
 
   .ref-ic {
     display: inline-flex;
+    opacity: 0.7;
   }
   &:hover {
     text-decoration: none;
-    background: light-dark(rgba(11, 102, 195, 0.13), rgba(90, 162, 255, 0.18));
+    color: var(--accent-strong);
+    border-bottom-color: currentColor;
   }
 }
 
 .group {
-  margin-top: clamp(28px, 4vw, 44px);
+  margin-top: clamp(34px, 4.5vw, 52px);
 }
 
 .group-title {
   position: relative;
-  margin: 0 0 6px;
-  font-size: 19px;
-  font-weight: 650;
-  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.1vw, 25px);
+  font-weight: 600;
   color: var(--fg-strong);
 }
 
 .group-intro {
-  margin: 0 0 6px;
-  font-size: 14px;
+  margin: 0 0 8px;
+  font-size: 14.5px;
   color: var(--fg-muted);
-  max-width: 70ch;
+  max-width: 68ch;
   text-wrap: pretty;
 }
 
 .settings {
-  margin-top: 8px;
-}
-
-/* Anchor-link affordance on hover. */
-.anchor {
-  position: absolute;
-  left: -24px;
-  display: inline-flex;
-  align-items: center;
-  height: 1em;
-  top: 0.2em;
-  color: var(--fg-faint);
-  opacity: 0;
-  transition: opacity 140ms var(--easing);
-}
-.article-title:hover .anchor,
-.group-title:hover .anchor {
-  opacity: 1;
-}
-
-@media (max-width: 860px) {
-  .anchor {
-    display: none;
-  }
+  margin-top: 10px;
 }
 </style>
