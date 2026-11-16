@@ -303,6 +303,35 @@
 
 
   // ========== Now I'm Trying ⬇️ ==========
+  // ========== UshiroE ==========
+  // https://github.com/otnc/UshiroE
+  // Vue: https://github.com/vuejs/art
+  // VoidZero: https://github.com/voidzero-dev/community-design-resources
+  // Oxc: https://github.com/oxc-project/oxc-assets
+  "ushiroe.enabled": true,
+  "ushiroe.mode": "fullscreen",
+  "ushiroe.sources": [
+    { "id": "vue", "name": "Vue", "type": "url", "path": "https://raw.githubusercontent.com/vuejs/art/master/logo.svg" },
+    { "id": "voidzero", "name": "VoidZero", "type": "url", "path": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/main/brand-assets/voidzero/voidzero-icon-light.svg" },
+    { "id": "vite", "name": "Vite", "type": "url", "path": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/main/brand-assets/vite/vite-icon-color-bracketless.svg" },
+    { "id": "vite-plus", "name": "Vite+", "type": "url", "path": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/main/brand-assets/vite%2B/vite%2B-icon-color-bracketless.svg" },
+    { "id": "vitest", "name": "Vitest", "type": "url", "path": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/main/brand-assets/vitest/vitest-icon-color-bracketless.svg" },
+    { "id": "rolldown", "name": "Rolldown", "type": "url", "path": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/main/brand-assets/rolldown/rolldown-icon-color-bracketless.svg" },
+    { "id": "oxc", "name": "Oxc", "type": "url", "path": "https://raw.githubusercontent.com/oxc-project/oxc-assets/main/bracketless.svg" }
+  ],
+  "ushiroe.fullscreen": {
+    "source": "*",
+    "opacity": 0.08,
+    "size": "contain",
+    "position": "center",
+    "blur": 0
+  },
+  "ushiroe.allImages": {
+    "random": true,
+    "interval": 300,
+    "changeOnStartupOnly": false
+  },
+
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
 
