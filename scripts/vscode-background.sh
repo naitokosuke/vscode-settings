@@ -8,7 +8,7 @@
 set -euo pipefail
 
 IMAGE_URL="https://images.unsplash.com/photo-1518837695005-2083093ee35b?fm=jpg&q=60&w=3000&auto=format&fit=crop" # Ocean Ripple by Matt Hardy (Unsplash)
-OPACITY=0.15
+OPACITY=0.08
 
 APP="${VSCODE_APP:-/Applications/Visual Studio Code.app}/Contents/Resources/app"
 CSS_KEY="vs/workbench/workbench.desktop.main.css"
