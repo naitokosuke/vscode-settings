@@ -6,6 +6,7 @@ on:
     paths:
       - '.vscode/**'
       - 'keybinding.jsonc'
+      - 'scripts/**'
   workflow_dispatch:
 
 jobs:
