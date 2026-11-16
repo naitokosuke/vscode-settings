@@ -321,7 +321,7 @@
   ],
   "ushiroe.fullscreen": {
     "source": "*",
-    "opacity": 0.08,
+    "opacity": 0.15,
     "size": "contain",
     "position": "center",
     "blur": 0
