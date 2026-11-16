@@ -542,11 +542,6 @@ export const configDocs: readonly ConfigDoc[] = [
             summary: "Recordable, replayable guided tours of a codebase.",
             refs: [{ label: "Marketplace", url: mkt("vsls-contrib.codetour") }],
           },
-          {
-            key: "anthropic.claude-code",
-            summary: "Claude Code, wired to the panel and terminal.",
-            refs: [{ label: "Marketplace", url: mkt("anthropic.claude-code") }],
-          },
         ],
       },
       {
