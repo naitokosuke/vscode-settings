@@ -6,6 +6,7 @@ on:
     paths:
       - '.vscode/**'
       - 'keybinding.jsonc'
+  workflow_dispatch:
 
 jobs:
   update-dotfiles:
